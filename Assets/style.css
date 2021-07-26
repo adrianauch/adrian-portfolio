@@ -1,0 +1,139 @@
+* {
+  box-sizing: border-box;
+}
+body,
+html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.hero-image {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("./lucas-ludwig-fAKINzq7QIM-unsplash.jpg");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgb(200, 200, 200);
+  background-color: rgb(13, 13, 13);
+  padding: 20px;
+  font-family: "Glegoo", serif;
+}
+
+.button {
+  background-color: rgb(200, 200, 200);
+  color: rgb(179, 224, 242);
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  float: unset;
+  border-radius: 8px;
+  font-family: "Glegoo", serif;
+}
+
+.hero-text button:hover {
+  background-color: rgb(179, 224, 242);
+  color: rgb(13, 13, 13);
+}
+
+.Adrian-pic {
+  width: 25%;
+  height: 30%;
+  object-fit: contain;
+  border-radius: 25px;
+}
+
+.float-left {
+  float: left;
+  margin-right: 25px;
+}
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  border-radius: 4px;
+  min-width: 75%;
+}
+
+.gallery img {
+  width: 100%;
+  height: 75%;
+  border-radius: 4px;
+  min-width: 75%;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+  flex-wrap: wrap;
+}
+
+.responsive {
+  padding: 0 6px;
+  float: left;
+  width: 25%;
+}
+
+h2 {
+  align-items: flex-start;
+}
+
+.contact {
+  list-style: none;
+}
+.about-me {
+  flex-wrap: wrap;
+  height: 100%;
+  width: 100%;
+  font-family: "Glegoo", serif;
+  background-color: rgb(207, 218, 224);
+  color: rgb(27, 20, 12);
+  border-radius: 4px;
+  align-items: stretch;
+}
+
+.projects {
+  display: flex;
+  font-family: "Glegoo", serif;
+  background-color: rgb(207, 218, 224);
+  color: rgb(27, 20, 12);
+  border-radius: 4px;
+  align-items: stretch;
+}
+
+.contact-info {
+  flex-wrap: wrap;
+  height: 100%;
+  width: 100%;
+  font-family: "Glegoo", serif;
+  background-color: rgb(207, 218, 224);
+  color: rgb(27, 20, 12);
+  border-radius: 4px;
+  align-items: stretch;
+}
+
+@media only screen and (max-width: 700px) {
+  .responsive {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .responsive {
+    width: 100%;
+  }
+}
