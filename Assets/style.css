@@ -1,16 +1,28 @@
 * {
   box-sizing: border-box;
 }
+:root {
+  --dark: rgb(49, 70, 55);
+  --light: rgb(249, 249, 249);
+  --lightGreen: #9eb6a6;
+}
 body,
 html {
   height: 100%;
   margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Glegoo", serif;
 }
 
+a {
+  color: inherit;
+  text-decoration: none;
+}
 .hero-image {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("./lucas-ludwig-fAKINzq7QIM-unsplash.jpg");
+  background-image: linear-gradient(
+      rgba(77, 77, 77, 0.5),
+      rgba(39, 38, 38, 0.5)
+    ),
+    url("../Images/IMG_2375.JPG");
   height: 100%;
   background-position: center;
   background-repeat: no-repeat;
@@ -18,6 +30,7 @@ html {
   position: relative;
   display: flex;
   flex-wrap: wrap;
+  opacity: 85%;
 }
 
 .hero-text {
@@ -26,27 +39,67 @@ html {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: rgb(200, 200, 200);
-  background-color: rgb(13, 13, 13);
-  padding: 20px;
+  color: var(--light);
+  background-color: var(--dark);
+  padding: 50px;
   font-family: "Glegoo", serif;
 }
-
+/* main {
+  max-width: 1000px;
+  margin: auto;
+} */
+.title {
+  font-size: 50px;
+  flex-direction: row;
+}
+.sub-title {
+  font-size: 30px;
+  margin: 25px;
+  flex-direction: row;
+}
+.image-adrian {
+  align-items: center;
+  flex-direction: row;
+  max-width: 400px;
+  max-height: 400px;
+  padding: 0;
+  border-radius: 4px;
+  background-image: linear-gradient(
+    rgba(77, 77, 77, 0.5),
+    rgba(39, 38, 38, 0.5)
+  );
+}
+.btn-group {
+  width: 24px;
+  margin: 25px auto 0 auto;
+  text-align: center;
+  display: inline;
+  flex: row;
+  background-color: var(--dark);
+  position: relative;
+}
 .button {
-  background-color: rgb(200, 200, 200);
-  color: rgb(179, 224, 242);
-  padding: 15px 32px;
+  color: var(--dark);
+  border-radius: 0px;
+  padding: 20px 20px;
+  letter-spacing: 1px;
   text-align: center;
   text-decoration: none;
   cursor: pointer;
-  float: unset;
-  border-radius: 8px;
+  display: inline-block;
   font-family: "Glegoo", serif;
+  font-size: 15px;
+  box-shadow: inset 0 0 0 var(--dark);
+  -webkit-transition: ease-out 0.8s;
+  -moz-transition: ease-out 0.8s;
+  border: 2px solid var(--dark);
+  flex-flow: unset;
+  border-radius: 8px;
 }
 
 .hero-text button:hover {
-  background-color: rgb(179, 224, 242);
-  color: rgb(13, 13, 13);
+  box-shadow: inset 400px 0 0 0px var(--dark);
+  color: var(--light);
 }
 
 .Adrian-pic {
@@ -56,25 +109,39 @@ html {
   border-radius: 25px;
 }
 
-.float-left {
-  float: right;
-  margin-right: 25px;
+.container {
+  display: flex;
+  flex-direction: column;
 }
-
 .about-me {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: row;
+  flex-wrap: nowrap;
   height: 100%;
   width: 100%;
   font-family: "Glegoo", serif;
-  background-color: rgb(207, 218, 224);
-  color: rgb(27, 20, 12);
+  background-color: var(--light);
+  color: var(--dark);
   border-radius: 4px;
-  align-items: stretch;
+  padding-top: 20px;
+  padding-left: 25px;
 }
-
+.about-me-title h2 {
+  float: left;
+  font-family: "Glegoo", serif;
+  background-color: var(--light);
+  color: var(--dark);
+}
+.sub-title {
+  float: right;
+}
 .projects {
   display: flex;
+  flex-direction: row;
+  float: right;
+}
+.imgs {
+  max-width: 50%;
 }
 
 .contact-info {
@@ -82,8 +149,8 @@ html {
   height: 100%;
   width: 100%;
   font-family: "Glegoo", serif;
-  background-color: rgb(207, 218, 224);
-  color: rgb(27, 20, 12);
+  background-color: var(--light);
+  color: var(--dark);
   border-radius: 4px;
   align-items: stretch;
 }
