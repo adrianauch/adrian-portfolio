@@ -23,30 +23,26 @@
   <!-- Header/landing page with mountain bkacground image and buttons to navigate to sections
   of the webpage STILL NEED TO ADD IN AN IMAGE -->
   <body>
-    <header class="hero-image">
-      <section class="hero-text">
-        <h1 class="title">Adrian Auchterlonie</h1>
-        <img
-          class="image-adrian"
-          src="./Images/IMG_2375.JPG"
-          alt="photo of adrian auchterlonie"
-        />
-        <p class="sub-title">Full Stack Web Developer</p>
-        <nav class="btn-group">
-          <button class="button"><a href="#about-me">About Me</a></button>
-          <button class="button"><a href="#projects">Projects</a></button>
-          <button class="button"><a href="#contact-info">Contact</a></button>
-          <button class="button"><a href="#">Resume</a></button>
-          <!-- I want to add a link to my resume -->
+    <header class="hero">
+      <div class="hero-content">
+        <h1 class="hero-title">Adrian Auchterlonie</h1>
+        <h2 class="hero-subtitle">Full Stack Web Developer</h2>
+        <nav>
+          <button class="hero-button"><a href="#about-me">About Me</a></button>
+          <button class="hero-button"><a href="#projects">Projects</a></button>
+          <button class="hero-button">
+            <a href="#contact-info">Contact</a>
+          </button>
+          <button class="hero-button"><a href="#">Resume</a></button>
         </nav>
-      </section>
+      </div>
     </header>
-
     <!-- main body of the app -->
     <main>
       <section class="about-me" id="about-me">
         <h2 class="about-me-title">About Me</h2>
         <br />
+        <img class="me-pic" src="./Images/IMG_2375.JPG" alt="pciture of me" />
         <p class="float-right">
           Lorem ipsum dolor sit amet consectetur, adipisicing elit.
           Reprehenderit, eius! Consequatur excepturi ad placeat distinctio
@@ -66,31 +62,31 @@
 STILL NEED TO FORMAT THIS SECTION! -->
       <section class="projects">
         <h2 id="project-h2">Projects</h2>
+        <br />
         <section class="row">
           <div class="img img-1">
-            <a href="#"> <div class="top text">Project Green 1</div> </a>
+            <a href="#"> <div class="top text">Beach Project</div> </a>
           </div>
           <div class="img img-2">
-            <a href="#"> <div class="bottom text">Project Green 2</div></a>
+            <a href="#"> <div class="bottom text">Snow Project</div></a>
           </div>
           <div class="img img-3">
-            <a href="#"> <div class="top text">Project Green 3</div></a>
+            <a href="#"> <div class="top text">Mountain Project</div></a>
           </div>
           <div class="img img-4">
-            <a href="#"> <div class="bottom text">Project Green 4</div></a>
+            <a href="#"> <div class="bottom text">Misty Project</div></a>
           </div>
         </section>
       </section>
-      <br />
-      <br />
       <!-- Contact section. I would like to add icons next to each link or have clickable icons -->
       <section class="contact-info" id="contact-info">
-        <h2>Contact Information</h2>
+        <h2 id="contact-h2">Contact Information</h2>
+        <br />
         <ul class="contact">
           <li>
-            <a href="#"> Linkedin</a>
-            <a href="#"> Github</a>
-            <a href="#"> Email</a>
+            <a id="linkedin" href="#"> Linkedin</a>
+            <a id="github" href="#"> Github</a>
+            <a id="email" href="#"> Email</a>
           </li>
         </ul>
       </section>
