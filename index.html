@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./Assets/style.css" />
+    <!-- Adding in a fotn from google font that I liked! -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -17,32 +18,35 @@
       href="https://fonts.googleapis.com/css2?family=Glegoo&family=Syncopate:wght@700&display=swap"
       rel="stylesheet"
     />
-    <title>Adrian Portfolio</title>
+    <title>Adrian Auchterlonie's Portfolio</title>
   </head>
-
-  <!-- Header/landing page with mountain bkacground image and buttons to navigate to sections
-  of the webpage STILL NEED TO ADD IN AN IMAGE -->
+<!-- Everything the user sees -->
   <body>
+    <!-- Landing page of web application. Should include My name, Title and buttons that link to different sections within my application. -->
     <header class="hero">
-      <div class="hero-content">
+      <!-- flexbox for my hero image. -->
+      <section class="hero-content">
         <h1 class="hero-title">Adrian Auchterlonie</h1>
         <h2 class="hero-subtitle">Full Stack Web Developer</h2>
         <nav>
+          <!-- buttons that connect to different sections with my content  -->
           <button class="hero-button"><a href="#about-me">About Me</a></button>
           <button class="hero-button"><a href="#projects">Projects</a></button>
           <button class="hero-button">
             <a href="#contact-info">Contact</a>
           </button>
-          <button class="hero-button"><a href="#">Resume</a></button>
+          <!-- Want to add my resume in eventually -->
+          <button class="hero-button"><a href="#" target="_blank">Resume</a></button>   <!-- Should open resume in a new tab -->
         </nav>
-      </div>
+      </section>
     </header>
-    <!-- main body of the app -->
+    <!-- main body of the app --> 
     <main>
-      <section class="about-me" id="about-me">
-        <h2 class="about-me-title">About Me</h2>
-        <br />
+      <!-- Section includes a bio about me and a pciture of me -->
+      <section class="about-me" id="about-me"> <!-- Flexbox for formating the section. Also a tag that links to my about me button -->
+        <h2 class="about-me-title">About Me</h2> <!-- Header for the section -->
         <img class="me-pic" src="./Images/IMG_2375.JPG" alt="pciture of me" />
+        <!-- Text about my background -->
         <p class="about-me-p">
           Welcome to my portfolio! I am currently enrolled in University of
           Denver's Full Stack Web Developer cirtificate program and I am
@@ -62,29 +66,31 @@
           to help comanpies preform effortlessly and efficiently.</p>
         </p>
       </section>
-      <!-- Project section. All Place holder images that will be updated throughout the course.
-STILL NEED TO FORMAT THIS SECTION! -->
+  <!-- section for projects. I currently don't have any projects so i have image place holders -->
       <section class="projects" id="projects">
         <h2 id="project-h2">Projects</h2>
         <br />
-        <section class="row">
+        <section class="project-row">
+          <!-- I used div because each image isn't a section. Each Image will eventually be a project with a link to the project on github. These are placeholders for now.  -->
           <div class="img img-1">
+            <!-- All anchor tags below don't have links to projects yet. -->
             <a href="#"> <div class="top text">Beach Project</div> </a>
           </div>
           <div class="img img-2">
-            <a href="#"> <div class="bottom text">Snow Project</div></a>
+            <a href="#"> <div class="top text">Snow Project</div></a>
           </div>
           <div class="img img-3">
             <a href="#"> <div class="top text">Mountain Project</div></a>
           </div>
           <div class="img img-4">
-            <a href="#"> <div class="bottom text">Misty Project</div></a>
+            <a href="#"> <div class="top text">Misty Project</div></a>
           </div>
         </section>
       </section>
-      <!-- Contact section. I would like to add icons next to each link or have clickable icons -->
+      <!-- Contact section.-->
       <section class="contact-info" id="contact-info">
         <h2 class="contact-h2">Contact Information</h2>
+  <!-- All anchor tags should open new tab -->
         <ul>
           <li>
             <a
@@ -97,15 +103,17 @@ STILL NEED TO FORMAT THIS SECTION! -->
               href="https://github.com/adrianauch?tab=repositories"
               target="_blank"
             >
-              Github</a
+               Github</a
             >
-            <a href="mailto:adrian.auch11@gmail.com" target="_blank"> Email</a>
+            <!-- mailto opens up new mail for user to email me -->
+            <a href="mailto:adrian.auch11@gmail.com" target="_blank"> ✉︎ Email</a>
           </li>
         </ul>
       </section>
     </main>
+    <!-- footer saying that the website was coded and designed by me -->
     <footer>
-      <p id="footer-p">Made and designed by Adrian Auchterlonie</p>
+      <p id="footer-p">Made and designed by Adrian Auchterlonie. (All photos are from upslash.com)</p>
     </footer>
   </body>
 </html>

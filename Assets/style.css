@@ -1,23 +1,22 @@
+/* Theme of my page, so it stays consistent */
 :root {
   --dark:#131313;
   --light: #D4D6D5;
   --lightGreen: #BFCACE;
   --font: font-family: "Glegoo", serif; ;
 }
-
-body,
-html {
+/* Setting margin and font-family and making sure my content fill the page*/
+body {
   height: 100%;
   margin: 0;
   padding: 0;
   font-family: "Glegoo", serif;
 }
-
-
+/* Keeps links from turning blue */
 a {
   color: inherit;
-  text-decoration: none;
 }
+/* flecbox for my image */
 .hero {
   position: relative;
   width: 100vw;
@@ -26,7 +25,9 @@ a {
   justify-content: center;
   align-items: center;
 }
+/* actual image and positioning in teh flexbox above */
 .hero::before {
+  /* Content is how the image is appearing in the box above */
   content: "";
   position: absolute;
   top: 0;
@@ -37,8 +38,10 @@ a {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
+  /* Filtering how bright/how much white comes through on the image */
   filter: brightness(80%);
 }
+/* Tile and subtitle live in this section */
 .hero-content {
   position: relative;
   font-family: var(--font);
@@ -46,6 +49,7 @@ a {
   text-align: center;
   margin: 0.625px;
 }
+/* My name with the dark backgound around it */
 .hero-title {
   font-size: 3rem;
   font-weight: 600;
@@ -57,7 +61,7 @@ a {
   padding-bottom: 5%;
   padding-right: 5%;
 }
-
+/* This is my title- "full stack dev" removed padding so it would flow into my title backgound*/
 .hero-subtitle {
   font-size: 2rem;
   font-weight: 200;
@@ -68,6 +72,7 @@ a {
   padding-right: 5%;
   padding-bottom: 5%;
 }
+/* my "nav" bar. the buttons lead to each section of the app */
 .hero-button {
   background-color: var(--dark);
   color: var(--light);
@@ -79,12 +84,13 @@ a {
   font-weight: 200;
   cursor: pointer;
 }
+/* change the background color of the button to the inverse of the colors when a user is hovering over each button */
 .hero-button:hover {
   background-color: var(--lightGreen);
   border: 1px solid (var(--dark));
   color: var(--dark);
 }
-
+/* next section- a small bio about me. created a flex box for this section  */
 .about-me {
   display: flex;
   flex-direction: row;
@@ -98,6 +104,7 @@ a {
   padding-left: 25px;
   border-bottom: 5px solid var(--dark);
 }
+/* stylize the about me title */
 .about-me-title h2 {
   float: left;
   font-family: "Glegoo", serif;
@@ -107,6 +114,7 @@ a {
   padding-left: 10%;
   margin-top:0 0;
 }
+/* picture of me for my portfolio */
 .me-pic {
   flex-direction: row;
   width: auto;
@@ -116,30 +124,34 @@ a {
   padding-bottom: 0;
   padding-top: 20px;
 }
+/* Moved paragraph the about me to and made the paragraph responsive */
 .about-me-p {
   float: right;
   padding-left: 30px;
   font-size: .8 rem;
+  /* overflow makes it so my paragraph doesnt run off the page. */
   overflow: hidden;
+  /* allows for the paragraph be more responsive and move sentences as pages move*/
   word-break: break-word;
   flex-wrap: wrap;
+  /* keeps in flex container */
   max-width: 60%;
 }
-.sub-title {
-  float: right;
-}
+/* flexbox for my project section */
 .projects {
   background-color: var(--light);
   display: flex;
   border-bottom: 5px solid var(--dark);
+  flex-direction: row;
 }
+/* title of my propject section formatted */
 #project-h2 {
   float: left;
   padding-right: 8%;
   padding-left: 2%;
-
 }
-.row {
+/* section for my projects to be aligned. This section I did last and is set up for mobile and then the media query is set up for desktop. */
+.project-row {
   width: 70%;
   height: 70%;
   max-width: 900px;
@@ -150,18 +162,28 @@ a {
   padding-bottom: 5%;
   padding-top: 5%;
 }
+/* formatting the images with small shadow to make them pop off page */
 .img {
   height: 40%;
   margin: 10px;
   box-shadow: 5px 10px 15px 0px var(--dark);
 }
+/* Image gets larger when user hovers over it */
+.img:hover {
+-ms-transform: scale(1.2);
+-webkit-transform: scale(1.2);
+transform: scale(1.2);
+}
+/* all img formatting with text. They are placeholders until have projects*/
 .img-1 {
   background: url("https://images.unsplash.com/photo-1531328420415-8d3406af2464?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80")
     no-repeat center center;
   background-size: cover;
-  width: 80%;
+  width: 100%;
 }
+/* Places text in the top left of the image. */
 .top :left {
+  /* used pseudo class and keeps the position of the text to the images  */
   position: absolute;
   top: 8px;
   left: 16px;
@@ -170,12 +192,7 @@ a {
   background: url("https://images.unsplash.com/photo-1610911331405-c818edca4ff4?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80")
     no-repeat center center;
   background-size: cover;
-  width: 100%;
-}
-.bottom :right {
-  position: absolute;
-  bottom: 8px;
-  right: 16px;
+  width: 80%;
 }
 .img-3 {
   background: url("https://images.unsplash.com/photo-1528232371454-5d9837147b7d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2089&q=80")
@@ -189,11 +206,13 @@ a {
   background-size: cover;
   width: 100%;
 }
+/* stylizing the text to match theme */
 .text {
   background-color: var(--lightGreen);
   color: var(--dark);
 }
 
+/* Conatct - not a flex box stylzing to match rest of application */
 .contact-info {
   font-family: "Glegoo", serif;
   background-color: var(--light);
@@ -201,24 +220,27 @@ a {
   display: block;
   margin:0 0 0 0;
 }
+/* Moving title to the left to match other titles in the web application */
 .contact-h2 {
 padding-left: 5%;
 padding-right: 2%;
 margin: 0;
-
-
+/* Makes sure that they links don't appear as links */
 }
 .contact-info ul li {
   list-style: none;
   text-align: center;
 }
+/* adds spacing between each link */
 li a {
   margin: 80px;
 }
+/* Footer that I created the website and places it in the center. Didn't add color because i liked the look of it as white */
 footer{
   text-align: center;
   
 }
+/* Below are all the queries to keep the web application responsove to different device sizes */
 
 /* For Mobile Phones */
 @media screen and (min-width:300px) {
@@ -248,32 +270,9 @@ footer{
     max-height: 80px;
     margin-top: 0px;
   }
-  .projects {
-    font-size: 15px;
-  }
-
 }
-
-
-
 /* tablets */
 @media screen and (min-width: 600px) {
-  .row {
-    height: 600px;
-  }
-
-  .img {
-    height: 23%;
-  }
-
-  .img-1,
-  .img-4 {
-    width: 65%;
-  }
-  .img-2,
-  .img-3 {
-    width: 65%;
-  }
   .hero {
     width: 100%;
   }
@@ -286,45 +285,29 @@ footer{
   .hero-button {
     font-size: 35px;
   }
-
 }
-
-
 /* Desktop */
 @media screen and (min-width: 800px) {
-  .row {
-    height: 600px;
-  }
-
-  .img {
-    height: 50%;
-  }
-
-  .img-1,
-  .img-4 {
-    width: 24%;
-  }
-  .img-2,
-  .img-3 {
-    width: 70%;
+  .hero{
+    width: 100vw;
+    height: 100vh;
   }
   .hero-title {
     font-size: 3rem;
-    margin: 10%;
     margin-bottom: 0px ;
     margin-left: 20%;
     margin-right: 20%;
-  }
-
+  } 
   .hero-subtitle {
     font-size: 2rem;
     margin: 20%;
     margin-top: 0%;
-    margin-bottom: 2%;
+    margin-bottom: .5%;
   }
   .hero-button {
     font-size: 1rem;
-    margin-top: 3%;
+    margin-top: 1%;
+    margin-bottom: 2%;
   }
   .me-pic {
     max-height: 300px;
@@ -339,7 +322,19 @@ footer{
   .about-me-p {
     font-size: .75rem;
   }
+  .project-row{
+    height: 600px; 
+  }
+  .img{
+    height: 50%;  
+  }
+  .img-1,
+  .img-4 {
+    width: 24%;
+  }
+  .img-2,
+  .img-3 {
+    width: 70%;
+  }
 }
-
-
 
