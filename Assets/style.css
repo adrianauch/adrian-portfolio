@@ -5,11 +5,6 @@
   --font: font-family: "Glegoo", serif; ;
 }
 
-* {
-  box-sizing: border-box;
-  background-color: var (--light);
-}
-
 body,
 html {
   height: 100%;
@@ -17,6 +12,7 @@ html {
   padding: 0;
   font-family: "Glegoo", serif;
 }
+
 
 a {
   color: inherit;
@@ -48,7 +44,7 @@ a {
   font-family: var(--font);
   color: var(--white);
   text-align: center;
-  margin: 0.625rem;
+  margin: 0.625px;
 }
 .hero-title {
   font-size: 3rem;
@@ -77,7 +73,7 @@ a {
   color: var(--light);
   border: 1px solid var(--dark);
   margin-top: 5rem;
-  padding: 0.9375rem1.875rem;
+  padding: 1px;
   font-family: var (var(--font));
   font-size: 1.125rem;
   font-weight: 200;
@@ -94,13 +90,13 @@ a {
   flex-direction: row;
   flex-wrap: nowrap;
   height: 100%;
-  width: 100%;
+  max-width: 100%;
   font-family: "Glegoo", serif;
   background-color: var(--light);
   color: var(--dark);
-  border-radius: 4px;
   padding-top: 20px;
   padding-left: 25px;
+  border-bottom: 5px solid var(--dark);
 }
 .about-me-title h2 {
   float: left;
@@ -109,19 +105,25 @@ a {
   color: var(--dark);
   padding-right: 10%;
   padding-left: 10%;
+  margin-top:0 0;
 }
 .me-pic {
   flex-direction: row;
   width: auto;
-  height: 250px;
-  padding-left: 50px;
+  height: 200px;
+  padding-left: 30px;
   padding-right: 0;
   padding-bottom: 0;
   padding-top: 20px;
 }
-.float-right {
+.about-me-p {
   float: right;
   padding-left: 30px;
+  font-size: .8 rem;
+  overflow: hidden;
+  word-break: break-word;
+  flex-wrap: wrap;
+  max-width: 60%;
 }
 .sub-title {
   float: right;
@@ -129,6 +131,7 @@ a {
 .projects {
   background-color: var(--light);
   display: flex;
+  border-bottom: 5px solid var(--dark);
 }
 #project-h2 {
   float: left;
@@ -195,19 +198,99 @@ a {
   font-family: "Glegoo", serif;
   background-color: var(--light);
   color: var(--dark);
-  border-radius: 4px;
-  display: flex;
+  display: block;
+  margin:0 0 0 0;
 }
-#contact-h2 {
-padding-left: 1.5%;
-padding-right: 10%;
+.contact-h2 {
+padding-left: 5%;
+padding-right: 2%;
+margin: 0;
+
 
 }
-ul{
+.contact-info ul li {
   list-style: none;
-  padding-right: inherit;
+  text-align: center;
+}
+li a {
+  margin: 80px;
+}
+footer{
+  text-align: center;
+  
 }
 
+/* For Mobile Phones */
+@media screen and (min-width:300px) {
+  .hero{
+    width: 100%;
+    height: 100%;
+  }
+  .hero-title, .hero-subtitle{
+    flex-direction: column;
+    font-size:5%;
+    background-color: none;
+    padding: 0;
+  }
+  .hero-button {
+    font-size: 8px;
+  }
+  .about-me {
+    flex-direction: column;
+    font-size: 10px;
+    margin-bottom: 2px;
+  }
+  .about-me-title {
+    margin-bottom: 2px;
+  }
+  .me-pic {
+    max-width: 80px;
+    max-height: 80px;
+    margin-top: 0px;
+  }
+  .projects {
+    font-size: 15px;
+  }
+
+}
+
+
+
+/* tablets */
+@media screen and (min-width: 600px) {
+  .row {
+    height: 600px;
+  }
+
+  .img {
+    height: 23%;
+  }
+
+  .img-1,
+  .img-4 {
+    width: 65%;
+  }
+  .img-2,
+  .img-3 {
+    width: 65%;
+  }
+  .hero {
+    width: 100%;
+  }
+  .hero-content {
+    width: 100%;
+  }
+  .hero-title, .hero-subtitle {
+    font-size: 50px;
+  }
+  .hero-button {
+    font-size: 35px;
+  }
+
+}
+
+
+/* Desktop */
 @media screen and (min-width: 800px) {
   .row {
     height: 600px;
@@ -225,4 +308,38 @@ ul{
   .img-3 {
     width: 70%;
   }
+  .hero-title {
+    font-size: 3rem;
+    margin: 10%;
+    margin-bottom: 0px ;
+    margin-left: 20%;
+    margin-right: 20%;
+  }
+
+  .hero-subtitle {
+    font-size: 2rem;
+    margin: 20%;
+    margin-top: 0%;
+    margin-bottom: 2%;
+  }
+  .hero-button {
+    font-size: 1rem;
+    margin-top: 3%;
+  }
+  .me-pic {
+    max-height: 300px;
+    max-width: 300px;
+    margin-right: 3%;
+    margin-left: 2%;
+    margin-bottom: 2%;
+  }
+  .about-me-title {
+    font-size: 2rem;
+  }
+  .about-me-p {
+    font-size: .75rem;
+  }
 }
+
+
+
